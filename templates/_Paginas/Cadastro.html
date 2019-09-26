@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="../_Css/Cadastro.css">
+{% endblock css %}
+
+{% block conteudo %}
+		<div id = "Mensagem">
+			<h1> CADASTRE-SE JÁ!</h1>	
+			</br>
+			<hr noshade=”noshade” width="45%" size="20px" align="left" color="black"/> <!--linha horizontal em cor solida-->
+			<strong> <p align="justify" style = "width: 50%; font-family: Berlin Sans FB Demi; font-size: 150%;" >﻿ Para se juntar a nós, preencha os seus dados e venha conferir mais sobre o nosso site. </p> </strong> <!--font size: tamanho do texto dentro do elemento-->
+		</div>
+		
+		<form>
+			<div id = "tabela">	
+				</br>
+				<h1 id = "tituloCasd1"> <b> FAÇA SEU CADASTRO </b> </h1>
+				<div class="form-row">
+					<div class="col">
+						<p> Nome </p>  <input type="text" class="form-control" placeholder="Nome"> 
+					</div>
+					<div class="col">
+						<p> Sobrenome </p> <input type="text" class="form-control" placeholder="Sobrenome">
+					</div>
+				</div>
+				
+				</br>
+				
+				<div class="form-row">
+					<div class="form-group col-md-6">
+					  <label for="inputEmail4">Email</label>
+					  <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+					</div>
+					<div class="form-group col-md-6">
+					  <label for="inputPassword4">Senha</label>
+					  <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label for="inputAddress">Endereço</label>
+					<input type="text" class="form-control" id="inputAddress" placeholder="Rua dos Bobos, nº 0">
+				</div>
+				
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label for="inputCity">Cidade</label>
+						<input type="text" class="form-control" id="inputCity">
+					</div>
+					<div class="form-group col-md-4">
+						<label for="inputEstado">Estado</label>
+						<select id="inputEstado" class="form-control">
+							<option selected>Escolher...</option>
+							<option>...</option>
+						</select>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="form-check">
+					  <input class="form-check-input" type="checkbox" id="gridCheck">
+					  <label class="form-check-label" for="gridCheck"> Clique em mim </label>	
+					</div>
+				</div>
+				
+				<button type="submit" class="btn btn-primary">Entrar</button>
+				<h2 id = "tituloCasd2"> Já tem uma conta? <a href="../_Paginas/Login.html"> Login </a> </h2>
+			</div>
+		</form>
+{% endblock conteudo %}

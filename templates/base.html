@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Cidade Reclama </title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> <!-- Bootstrap-->
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> <!-- Bootstrap-->
+		
+		<link rel="stylesheet" type="text/css" href="PagInicial.css"> <!-- CSS -->
+		{% block css %}
+        {% endblock css %}
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> <!-- Atualiza o documento a cada 30 segundos -->
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script> <!-- Faz referencia ao JS -->
+		
+		<script type="text/javascript" src="scripts/nbw-parallax.js"></script> <!-- Efeitos-->
+		<script type="text/javascript" src="scripts/jquery.localscroll-1.2.7-min.js"></script> <!-- Efeitos-->
+		<script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script> <!-- Efeitos-->
+		<script type="text/javascript" src="scripts/jquery.inview.js"></script> <!-- Efeitos-->
+		<script src = "Cadastro.js"> </script>
+		<!-- <script type="text/javascript">
+		$(document).ready(function(){
+			$('#nav').localScroll();
+		})
+		</script> -->
+		
+	</head>		
+	<body>
+			{% include "_Nav.html" %}
+
+            {% block conteudo %}
+            {% endblock conteudo %}
+          
+            {% include "_Rodape.html" %}
+       
+
+	</body>
+</html>
