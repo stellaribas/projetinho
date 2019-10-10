@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
@@ -35,16 +36,16 @@ if(__name__=='__main__'):
 
 
 
-from flask import Flask, render_template
-from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.bd'
 db = SQLAlchemy(app)
 
 class Usuario(db.Model):
-    cod_acesso = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
     nome = db.Column(db.String(80), unique=True, nullable=False)
     senha = db.Column(db.String(12), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
-    
+
+    def __repr__(self):
+        return '<User %r>' % self.Usuario #poderia ser email...
